@@ -6,9 +6,12 @@ const factorialIterative = function(n) {
     return result;
 }
 
-const factorial = function(n, acum = 1) {
-    return n < 2 ? acum : factorial(n-1, acum * n);
-}
+const factorial = function(n) {
+    const auxFactorial = (n, acum) => n < 2 ? 
+                                                acum : 
+                                                auxFactorial(n-1, acum * n);
+    return auxFactorial(n,1);
+} 
 
 console.log(
     factorialIterative(5),

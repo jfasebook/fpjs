@@ -8,9 +8,13 @@ const fibonacciIterative = function(n) {
     return next;
 };
 
-const fibonacci = function(n, current = 1, next = 1) {
-    return n < 3 ? next : fibonacci(n - 1, next, current + next);
+const fibonacci = function(n) {
+    const auxFibonacci = (n, current, next) =>  n < 3 ? 
+                                                    next : 
+                                                    auxFibonacci(n - 1, next, current + next);
+    return auxFibonacci(n,1,1);
 }
+
 
 console.log(
     fibonacciIterative(10),
