@@ -57,7 +57,7 @@
 (function (/* 03. hasV (v, e) */) {
     
     var hasV = function (v, e) {
-
+        return require('./hasV')(v, e);
     };
   
     console.log (
