@@ -57,7 +57,7 @@
 (function (/* 03. hasV (v, e) */) {
     
     var hasV = function (v, e) {
-        return require('./hasV')(v, e);
+        return require('./hasV').hasV(v, e);
     };
   
     console.log (
@@ -76,7 +76,7 @@
 (function (/* 04. repeatV (v) */) {
     
     var repeatV = function (v) {
-
+        return require('./repeatV')(v);
     };
     
     console.log (

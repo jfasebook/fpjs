@@ -1,7 +1,7 @@
+const hasVFrom = (v, e, i) => v[i] === e || i > v.length - 1 ?
+                                                    v[i] === e:
+                                                    hasVFrom(v, e, i + 1);
 const hasV = function(v, e) {
-    const hasVFrom = (v, e, i) => v[i] === e || i > v.length - 1 ?
-                                                        v[i] === e:
-                                                        hasVFrom(v, e, i + 1);
     return hasVFrom(v, e, 0);
 }
 
@@ -16,4 +16,7 @@ if(module && !module.parent) {
     )
 }
 
-module.exports = hasV;
+module.exports = {
+    hasV,
+    hasVFrom
+};
