@@ -35,10 +35,10 @@
 (function (/* 02. addV (v) */) {
     
     var addVA = function (v) {
-
+        return require('./sumVector').sumVector(v);
     };
     var addVB = function (v) {
-
+        return require('./sumVector').sumVectorReverse(v);
     };
     
     console.log (
