@@ -3,8 +3,11 @@ function addUp(n) {
     return addUpAux(n, 0); 
 }
 
+if(module && !module.parent) {
+    console.log(
+        addUp(100),
+        addUp(5)
+    );
+}
 
-console.log(
-    addUp(100),
-    addUp(5)
-);
+module.exports = addUp;

@@ -7,9 +7,12 @@ function sumdigits(n) {
 
 }
 
+if(module && !module.parent) {
+    console.log(
+        sumdigits(5),
+        sumdigits(25),
+        sumdigits(125)
+    )
+}
 
-console.log(
-    sumdigits(5),
-    sumdigits(25),
-    sumdigits(125)
-)
+module.exports = sumdigits;

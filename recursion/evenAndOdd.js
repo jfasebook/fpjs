@@ -31,19 +31,22 @@ function odd(n) {
     return oddAux(n >= 0 ? n : -n );
 }
 
-console.log(
-    evenIterative(-4) === even(-4),
-    evenIterative(0) === even(0),
-    evenIterative(-3) === evenIterative(-3),
-    evenIterative(3) === evenIterative(3)
-);
+if(module && !module.parent) {
+    console.log(
+        evenIterative(-4) === even(-4),
+        evenIterative(0) === even(0),
+        evenIterative(-3) === evenIterative(-3),
+        evenIterative(3) === evenIterative(3)
+    );
+    
+    console.log(
+        oddIterative(0) === odd(0),
+        oddIterative(1) === odd(1),
+        oddIterative(-1) === odd(-1),
+        oddIterative(-3) === odd(-3)
+    );
+}
 
-console.log(
-    oddIterative(0) === odd(0),
-    oddIterative(1) === odd(1),
-    oddIterative(-1) === odd(-1),
-    oddIterative(-3) === odd(-3)
-);
 
 /** Indirect recursivity */
 function anotherEven(n) {
@@ -56,3 +59,7 @@ function anotherOdd(n) {
     return auxOdd(n >= 0 ? n : -n);
 }
 
+module.exports = {
+    even,
+    odd
+}

@@ -13,7 +13,15 @@ const factorial = function(n) {
     return auxFactorial(n,1);
 } 
 
-console.log(
-    factorialIterative(5),
-    factorial(5)
-);
+if(module && !module.parent) {
+    console.log(
+        factorialIterative(5),
+        factorial(5)
+    );
+}
+
+
+module.exports = {
+    factorial,
+    factorialIterative
+}

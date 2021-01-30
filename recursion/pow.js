@@ -15,9 +15,15 @@ const pow = function(n,e) {
     return e >= 0 ? powAux(n,e,1) : 1 / powAux(n, -e, 1);
 } 
 
-console.log(
-    powIterative(2,3),
-    pow(2,3),
-    powIterative(2,-2),
-    pow(2,-2)
-)
+if(module && !module.parent) {
+    console.log(
+        powIterative(2,3),
+        pow(2,3),
+        powIterative(2,-2),
+        pow(2,-2)
+    );
+}
+
+module.exports = {
+    pow
+};

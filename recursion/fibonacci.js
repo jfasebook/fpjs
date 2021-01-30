@@ -15,8 +15,14 @@ const fibonacci = function(n) {
     return auxFibonacci(n,1,1);
 }
 
+if(module && !module.parent) {
+    console.log(
+        fibonacciIterative(10),
+        fibonacci(10)
+    )
+}
 
-console.log(
-    fibonacciIterative(10),
-    fibonacci(10)
-)
+module.exports = {
+    fibonacci,
+    fibonacciIterative
+};
