@@ -7,13 +7,11 @@
 // indica si un número es simétrico respecto a sí mismo.
 
 (function (/* 01. mirror (n, m) */) {
-    
-
     var mirror = function (n, m) {
-
+        return require('./mirror')(n,m);
     };
     var palindrome = function (n) {
-
+        return require('./palindrome')(n);
     };
     
     console.log (
