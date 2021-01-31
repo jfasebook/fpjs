@@ -8,7 +8,7 @@
 
 (function (/* 01. mirror (n, m) */) {
     var mirror = function (n, m) {
-        return require('./mirror')(n,m);
+        return require('./mirror').mirror(n,m);
     };
     var palindrome = function (n) {
         return require('./palindrome')(n);
@@ -95,7 +95,7 @@
 (function (/* 05. mirrorV (v, w) */) {
     
     var mirrorV = function (v, w) {
-
+        return require('./mirror').mirrorV(v, w);
     };
     
     console.log (

@@ -1,4 +1,4 @@
-const reverse = require('./reverse');
+const {reverse} = require('./reverse');
 const palindrome = (n) => n === reverse(n);
 
 if(module && !module.parent) {
