@@ -119,11 +119,11 @@
 (function (/* 06. sortV (v) */) {
     
     var insertV = function (v, e) {
-
+        return require('./insertV').insertV(v, e);
     };
 
     var sortV = function (v) {
-
+        return require('./sortV').sortV(v);
     };
     
     console.log (
